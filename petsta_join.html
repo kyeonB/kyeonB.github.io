@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon link -->
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+    <link rel="icon" href="images/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- main link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="petsta_login,join.css">
+    <title>petsta_join</title>
+    <script>
+        alert("'join'버튼을 누르시면 페이지가 넘어갑니다.")
+        $(function(){
+
+            $("#join").click(function(){
+                alert("PETSTAGREM에 오신 것을 환영합니다. :-)")
+                $(location).attr('href','petsta.html');
+                return false;
+            })
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <img src="images/pet_logo.png">
+        <h1>PETSTAGRAM</h1>
+        <h2>JOIN</h2>
+        <form action="" method="POST"> 
+            <div class="input-box"> 
+                <input id="input_id" type="text" name="id" placeholder="ID">
+                <label for="id">ID</label> 
+                <input id="id_btn" class="btn" type="submit" value="중복조회">
+            </div> 
+            
+            <div class="input-box"> 
+                    <input type="password" name="password" placeholder="비밀번호"> 
+                    <label for="password">PASSWARD</label> 
+            </div> 
+            <div class="input-box"> 
+                <input type="password_ch" name="password" placeholder="비밀번호"> 
+                <label for="password_ch">PASSWARDCHEACK</label> 
+            </div> 
+            <div class="input-box"> 
+                <input type="name" name="name" placeholder="이름"> 
+                <label for="name">NAME</label> 
+            </div> 
+            <div class="input-box"> 
+                <input type="phone" name="number" placeholder="전화번호"> 
+                <label for="number">NUMBER</label> 
+            </div> 
+            <input id="join" class="btn" type="submit" value="JOIN">
+        </form>
+    </div>
+</body>
+</html>

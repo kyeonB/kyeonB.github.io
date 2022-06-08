@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="jquery.mousewheel.min.js"></script>
+    <link rel="stylesheet" href="../static/MAINdex.css">
+    <link rel="stylesheet" href="../static/Fstuff_all.css">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/NanumYuNiDdingDdangDdingDdang.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400;500;600;700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <title>Document</title>
+
+    <script>
+        $(function(){
+
+            //let typo1="욕심쟁이 !";
+            
+            //let num = 0;
+            //let timer = setInterval(function(){
+            //    if (num < typo1.length){
+            //    $("#section01 #mente h1").append(typo1[num]);
+            //    num++
+            //}else{
+            //    clearInterval(timer)
+            //}
+            //},500);
+            
+            var burger = $('#nav-icon');
+
+            burger.each(function(index){
+            var $this = $(this);
+            $this.on('click', function(e){
+            e.preventDefault();
+            $(this).toggleClass('active');
+            });
+        });
+
+            $(document).ready(function(){
+                $("#nav-icon1").click(function(){
+                    $(this).toggleClass("open");
+                });
+            });
+
+            let list_hei = 
+            $(".button").mouseenter(function(){
+                
+            });
+            
+            $("#nav-icon").click(function(){
+                if($('#hidemenu').css('display')=='none') {
+                    $('#hidemenu').show();
+                }else{$('#hidemenu').hide();}
+            });
+
+            
+            
+
+            $("#map li").mouseenter(function(){
+                $("h4",this).addClass("down")
+                $("img",this).addClass("bigger")
+            });
+            $("#map li").mouseleave(function(){
+                $("h4",this).removeClass("down")
+                $("img",this).removeClass("bigger")
+            });
+            
+            $("#connect li").mouseenter(function(){
+                $("span",this).fadeIn();
+            })
+
+            
+            
+            $(".box .bi").click(function(){
+                $("#slider ul:not(:animated)").stop().animate({marginLeft:0});
+            });
+            
+            //$(".button").click(function(){
+            //    let num = $(this).index() + 1;
+            //    $("#section02 .box").hide();
+            //    $("#section02 #box0" + num).show();
+            //    return false;                
+            //});
+
+            $("#box01 #title_list li").mouseenter(function(){
+                let front = $(this).index();
+                $("#box01 .object .project").removeClass("look");
+                $("#box01 .object .project").eq(front).addClass("look");
+            });
+
+            for( let i = 0; i < 20; i++) { 
+                let num = i+1
+                $("#box04 .object ul").append("<li><img src='../static/image/psai" + num + ".png'></li>");
+            };
+
+            
+            //$(".object ul li").click(function(){
+            //    let imgName = $(this).index();
+            //    $("#show").html('<img src="../static/image/psai' + imgName + '.png">')
+            //})
+            $("#modal").hide();
+            $(".object ul li img").click(function(){
+                let adress = $(this).attr("src");
+                $("#modal img").attr("src",adress);
+                $("#modal").fadeIn();
+            });
+            $("#modal").click(function(){
+                $("#modal").hide();
+            });
+                    
+            $(".scroll").mousewheel(function(e,delta){
+                let winhei= $(window).height();
+                let scrpos= $(this).offset().top;//마우스 위치값
+                if( delta > 0 ){
+                    $("html,body").stop().animate({scrollTop:scrpos -winhei});
+                    return false;
+                }else{
+                    $("html,body").stop().animate({scrollTop:scrpos +winhei});
+                    return false;
+                }
+            });
+
+            $(".button").click(function(){
+                let winwid= $(window).width();
+                $("#slider ul").stop().animate({marginLeft:-winwid});
+                let num = $(this).index() + 1;
+                $("#section02 .box").hide();
+                $("#section02 #box0" + num).show();
+                return false;   
+                
+            }); 
+            $(".button").mouseenter(function(){
+                $("#photo_list li").removeClass("showUp")
+                let numm = $(this).index();
+                $("#photo_list li").eq(numm).toggleClass("showUp")});
+        });
+
+    </script>
+</head>
+<body>
+    <header>
+        <h1><a href="#"><img src="../static/image/blank_Logo.png"></a></h1>
+        <div id="nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <section id="section01" class="scroll">
+        
+        <div id="mente">
+            <h2>portfolio>></h2>
+            <!-- <h1></h1>
+            <p>해보고 싶은 것도 많고 하고 싶은 것은 꼭 다 정복해야만 만족하는 성격이지만</p>
+            <p> 이 성품을  <span class="hie">장점으로 빛나게</span> 노력하고 있습니다.</p> -->
+        </div>
+        <div id="name" contenteditable="ture">Hyeonjeong</div>
+    </section>
+    <div id="hidemenu">
+        <div id="map">
+            
+            <ul>
+                <li><h1>contants</h1>
+                    <h4>01</h4>
+                    <h5>intro</h5>
+                    <img src="../static/image/mainmenu4.png">
+                    <p>개인프로젝트_blank intro</p>
+                </li>
+                <li>
+                    <h4>02</h4>
+                    <h5>portfolio</h5>
+                    <img src="../static/image/메인메뉴목업4.png">
+                    <p>01.project
+                        <br>02.css animation
+                        <br>03.uxuidesign
+                        <br>04.artwork</p>
+
+                </li>
+                <li>
+                    <h4>03</h4>
+                    <h5>host_info</h5>
+                    <img src="../static/image/mainmenu4.png">
+                    <p>프로필</p>
+
+                </li>
+                <li>
+                        <h6>connect</h6>
+                        <div id="line"></div>
+                    <ol id="connect">
+                        
+                        <li>
+                            <span><a href="#">https://github.com/kyeonB</a></span>
+                            <i class="bi bi-github"></i>
+                            
+                        </li>
+                        <li>
+                            <span>jay4636@naver.com</span>
+                            <i class="bi bi-chat-fill"></i>
+                            
+                        </li>
+                        <li>
+                            <span>jay4636@naver.com</span>
+                            <i class="bi bi-envelope"></i>
+                        </li>
+                        
+                    </ol>
+                    
+                </li>
+            </ul>
+        </div>
+    </div>
+    <section id="section02" class="scroll">
+        <div id="slider">
+            <ul>
+                <li id="main_listpart">
+                    <ol id="photo_list">
+                        <li><img src="../static/image/minamenu1.png"></li>
+                        <li><img src="../static/image/메인대기2.jpg"></li>
+                        <li><img src="../static/image/mainmenu4.png"></li>
+                        <li><img src="../static/image/메인대기3.jpg"></li>
+                    </ol>
+                    <ol id="menu_list">
+                        <li class="button 1">01project</li>
+                        <li class="button 2">02css animation</li>
+                        <!-- <li class="button 3">03artwork</li> -->
+                        <li class="button 4">04artwork</li>
+                    </ol>
+                </li>
+                <li id="the_warrper">
+                    <div id="box01" class="box">
+                        <h1>01</h1>
+                        <i class="bi bi-arrow-left"></i>
+                        <span>project</span>
+                        <ol id="title_list">
+                            <li>01petstagram</li>
+                            <li>02노른자닷컴</li>
+                            <!-- <li>03question</li>
+                            <li>04음?k</li> -->
+                        </ol>
+                        <div class="object">
+                            <div class="project" id="project01">
+                                <h4>01 펫스타그램 - 오조만줘라팀</h4>
+                                <img src="../static/image/petpet_04.png">
+                                <a href="../petstagrem/petsta_login.html">보러가기 ></a>
+                                <h3>펫스타 그램은 스터디 그룹에서 "스파르타 코딩클럽 프로젝트 공모전"을 통해 나온 프로젝트입니다.
+                                    <br/>
+                                    기존 프로젝트 결과물에서 리디자인과 추가적인 요소(SHOP)을 넣어 기존 instagrem과 비슷하게 만든 
+                                    반려동물 자랑 페이지 입니다.
+                                    <br/>디자인, 프론트 앤드를 담담하여 만들었습니다
+                                    <br/>백앤드 : 함용훈 (Python), 김민정(Rovo3T) 
+                                    <br/>프론트 앤드 : 박현정(디자인,메인, shop, 로그인, 회원가입), 이윤미(퀴즈, 동영상링크)
+                                </h3>
+                            </div>
+                            <div class="project">
+                                <h4>02 노른자 닷컴 - 감동란팀</h4>
+                                
+                                <div id="slider03">
+                                    <ol>
+                                        <li>
+                                            <img src="../static/image/노른자66.png">
+                                        </li>
+                                        <li>
+                                            <img src="../static/image/피우다 프로젝트.jpg">
+                                        </li>
+                                        <li>
+                                            <img src="../static/image/노른자 출품메인.jpg">
+                                        </li>
+                                        <li>
+                                            <img src="../static/image/노른자 출품.jpg">
+                                        </li>
+                                    </ol>
+                                </div>
+                                <a href="../ICT이노베이션스퀘어 SW개발 공모전 출품작 소개자료집.pdf">ICT이노베이션스퀘어 SW개발 공모전 출품작 소개자료집.pdf ></a>
+                                <br/><a href="../노른자/templates/Main01.html">자세히보기 ></a>
+                                <h3>노른자는 “ICT이노베이션 스퀘어 SW개발 공모전” 출품작에 소개되었던 프로젝트로 
+                                    스터디를 같이 했던 “감동란”팀과 함께한 프로젝트입니다.  
+                                    <br/>
+                                    반응형 페이지로 만들었으며 노인분들의 편의를 위해 어렵지않고 조금더 쉽고 간단하게 만들어 사용에 용이하게 만들고 
+                                    
+                                    전체적인 ux/ui디자인과 아트웍작업, 메인페이지, 로그인, 가입 페이지의 프론드앤드를 담당하였습니다.
+                                    그외 자료 수집, 아이디어는 노인복지관에서 일하시는 어머니와 함께 하였습니다.
+                                    <br/>백앤드 : 박결, 함용훈 (Python)
+                                    프론트 앤드 : 박현정, 이윤미
+                                </h3>
+                            </div>
+                            <!-- <div class="project">
+                                <h4>03</h4>
+                                <img src="../static/image/노른자66.png">
+                                <a href="#">자세히보기 ></a>
+                            </div>
+                            <div class="project">
+                                <h4>04</h4>
+                                <img src="../static/image/노른자66.png">
+                                <a href="#">자세히보기 ></a>
+                            </div> -->
+                        </div>
+                    </div>
+
+                    <div id="box02" class="box">
+                        <h1>02</h1>
+                        <i class="bi bi-arrow-left"></i>
+                        <span>animation</span>
+                        <h2>HTML과 CSS, jquery로만 만든 작업입니다.</h2>
+                        <div class="object"> 
+                                    <p class="codepen" data-height="391" data-default-tab="result" data-slug-hash="JjOLwGQ" data-user="kyeonb" style="height: 391px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                                        <span>See the Pen <a href="https://codepen.io/kyeonb/pen/JjOLwGQ">
+                                        Untitled</a> by kyeonB (<a href="https://codepen.io/kyeonb">@kyeonb</a>)
+                                        on <a href="https://codepen.io">CodePen</a>.</span>
+                                    </p>
+                                    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                                    <div id="syline">
+                                        <div id="highway"></div>
+                                        <div id="city"></div>
+                                
+                                        <div id="car">
+                                            <img src="../static/image/Car_Animation_Img/car.png" alt="">
+                                        </div>
+                                        <div id="wheels">
+                                            <img src="../static/image/Car_Animation_Img/wheel.png" id="Back" alt="">
+                                            <img src="../static/image/Car_Animation_Img/wheel.png" id="front" alt="">
+                                        </div>
+                                    </div>
+
+                            
+                        </div>
+                    </div>
+
+                    <div id="box03" class="box" >
+                        <h1>03</h1>
+                        <i class="bi bi-arrow-left"></i>
+                        <span>Aboutme</span>
+                        <div class="object">
+                            
+                        </div>
+                    </div>
+
+                    <div id="box04" class="box">
+                        <h1>04</h1>
+                        <i class="bi bi-arrow-left"></i>
+                        <span>art work</span>
+                        <div class="object">
+                            <ul id="mm"></ul>
+                        </div>
+                        <div id="modal">
+                            <img src="#">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- <section id="section03" class="scroll"></section>
+</body> -->
+</html>

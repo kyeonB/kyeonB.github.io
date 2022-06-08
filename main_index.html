@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="jquery.mousewheel.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="../static/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400;500;600;700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <title>Document</title>
+    
+</head>
+<body>
+    <header>
+        <h1><a href="#"><img src="../static/image/blank_Logo.png"></a></h1>
+        <ul>
+            <li><a href="#">artbord</a></li>
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">HOST PAGE</a></li>
+        </ul>
+        <a href="#" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+    </header>
+    <div id="main"></div>
+    <!-- <div id="svg">
+        <svg version="1.1" id="layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+        y="0px" viewBox="0 0 1366 768" style="enable-background:new 0 0 1366 768;" xml:space="preserve">
+        <style type="text/css">
+        .st0{fill:none;stroke:#000000;stroke-miterlimit:10;}
+        </style>
+        <path class="st0" d="M364.5-1.25c0,0,126-53,167,112s-385,120-301,313s378.26-10.14,385.63-110.07s-81.55,111.76-60.09,152.41
+        c0,0,31.22-89.85,56.84-72.1s-59.89,112.42,42.53,44.21c0,0,67.7-29.07,46.89-57.77s-118.8,166.31,21.2,35.31c0,0,65-47,54-107
+        s-83,138-52,153s49-49,49-49s62-24,47-99s-114.77,280.38,10.12,96.69c0,0-42.12,40.11-7.12,47.21s66-69.9,39-76.9
+        s-34.2,97.26,27.9,43.13s170.1-217.13,249.1-63.13c0,0,203.23,368.66-363.6,328.01S125.69,930.61,125.69,930.61"/>
+        <text transform="matrix(1 0 0 1 1494.834 135.4395)"><tspan x="0" y="0" style="font-family:'AdobeMyungjoStd-Medium-KSCpc-EUC-H'; font-size:12px;">&lt;svg version=&quot;1.1&quot; id=&quot;레이어_1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; x=&quot;0px&quot;</tspan><tspan x="0" y="14.4" style="font-family:'AdobeMyungjoStd-Medium-KSCpc-EUC-H'; font-size:12px; letter-spacing:32;">	</tspan><tspan x="36" y="14.4" style="font-family:'AdobeMyungjoStd-Medium-KSCpc-EUC-H'; font-size:12px;"> y=&quot;0px&quot; viewBox=&quot;0 0 1366 768&quot; style=&quot;enable-background:new 0 0 1366 768;&quot; xml:space=&quot;preserve&quot;&gt;</tspan><tspan x="0" y="28.8" style="font-family:'AdobeMyungjoStd-Medium-KSCpc-EUC-H'; font-size:12px;">&lt;style type=&quot;text/css&quot;&gt;</tspan><tspan x="0" y="43.2" style="font-family:'AdobeMyungjoStd-Medium-KSCpc-EUC-H'; font-size:12px; letter-spacing:32;">	</tspan><tspan x="36" y="43.2" style="font-family:'AdobeMyungjoStd-Medium-KSCpc-EUC-H'; font-size:12px;">.st0{fill:none;stroke:#000000;stroke-miterlimit:10;}</tspan><tspan x="0" y="57.6" style="font-family:'AdobeMyungjoStd-Medium-KSCpc-EUC-H'; font-size:12px;">&lt;/style&gt;</tspan><tspan x="0" y="72" style="font-family:'AdobeMyungjoStd-Medium-KSCpc-EUC-H'; font-size:12px;">&lt;path class=&quot;st0&quot; d=&quot;M364.5-1.25c0,0,126-53,167,112s-385,120-301,313s378.26-10.14,385.63-110.07s-81.55,111.76-60.09,152.41</tspan><tspan x="0" y="86.4" style="font-family:'AdobeMyungjoStd-Medium-KSCpc-EUC-H'; font-size:12px; letter-spacing:32;">	</tspan><tspan x="36" y="86.4" style="font-family:'AdobeMyungjoStd-Medium-KSCpc-EUC-H'; font-size:12px;">c0,0,31.22-89.85,56.84-72.1s-59.89,112.42,42.53,44.21c0,0,67.7-29.07,46.89-57.77s-118.8,166.31,21.2,35.31c0,0,65-47,54-107</tspan><tspan x="0" y="100.8" style="font-family:'AdobeMyungjoStd-Medium-KSCpc-EUC-H'; font-size:12px; letter-spacing:32;">	</tspan><tspan x="36" y="100.8" style="font-family:'AdobeMyungjoStd-Medium-KSCpc-EUC-H'; font-size:12px;">s-83,138-52,153s49-49,49-49s62-24,47-99s-114.77,280.38,10.12,96.69c0,0-42.12,40.11-7.12,47.21s66-69.9,39-76.9</tspan><tspan x="0" y="115.2" style="font-family:'AdobeMyungjoStd-Medium-KSCpc-EUC-H'; font-size:12px; letter-spacing:32;">	</tspan><tspan x="36" y="115.2" style="font-family:'AdobeMyungjoStd-Medium-KSCpc-EUC-H'; font-size:12px;">s-34.2,97.26,27.9,43.13s170.1-217.13,249.1-63.13s-378,330-330,383s367,79,367,79&quot;/&gt;</tspan><tspan x="0" y="129.6" style="font-family:'AdobeMyungjoStd-Medium-KSCpc-EUC-H'; font-size:12px;">&lt;/svg&gt;</tspan></text>
+        <text transform="matrix(1 0 0 1 1443.4572 639.9954)"><tspan x="0" y="0" style="font-family:'AdobeMyungjoStd-Medium-KSCpc-EUC-H'; font-size:12px;">.st0 { stroke-dasharray: 4266; stroke-dashoffset: 8532; animation: dash 10s linear infinite; }</tspan><tspan x="0" y="14.4" style="font-family:'AdobeMyungjoStd-Medium-KSCpc-EUC-H'; font-size:12px;">        </tspan><tspan x="0" y="28.8" style="font-family:'AdobeMyungjoStd-Medium-KSCpc-EUC-H'; font-size:12px;">        @keyframes dash {</tspan><tspan x="0" y="43.2" style="font-family:'AdobeMyungjoStd-Medium-KSCpc-EUC-H'; font-size:12px;">            to {</tspan><tspan x="0" y="57.6" style="font-family:'AdobeMyungjoStd-Medium-KSCpc-EUC-H'; font-size:12px;">            stroke-dashoffset: 0;</tspan><tspan x="0" y="72" style="font-family:'AdobeMyungjoStd-Medium-KSCpc-EUC-H'; font-size:12px;">            }</tspan><tspan x="0" y="86.4" style="font-family:'AdobeMyungjoStd-Medium-KSCpc-EUC-H'; font-size:12px;">        }</tspan></text>
+        <text transform="matrix(1 0 0 1 1444.5372 464.071)"><tspan x="0" y="0" style="font-family:'AdobeMyungjoStd-Medium-KSCpc-EUC-H'; font-size:12px;">var myPath = document.querySelector(&quot;path&quot;);</tspan><tspan x="0" y="14.4" style="font-family:'AdobeMyungjoStd-Medium-KSCpc-EUC-H'; font-size:12px;">        var length = myPath.getTotalLength();</tspan><tspan x="0" y="28.8" style="font-family:'AdobeMyungjoStd-Medium-KSCpc-EUC-H'; font-size:12px;">        console.log(length*2)</tspan><tspan x="0" y="43.2" style="font-family:'AdobeMyungjoStd-Medium-KSCpc-EUC-H'; font-size:12px;">        });</tspan><tspan x="0" y="57.6" style="font-family:'AdobeMyungjoStd-Medium-KSCpc-EUC-H'; font-size:12px;">        //4265.818359375</tspan></text>
+        </svg>
+    </div> -->
+    <div id="mainEvent">
+        <div id="slider">
+            <ul>
+                <li id="section01" class="section">
+                <div id="container">
+                    <div class="button">
+                        <span>01artwork</span>
+                        <p>artwork</p>
+                    </div>
+                    <div class="button">
+                        <span>02design</span>
+                        <p>ux ui</p>
+                    </div>
+                    <div class="button">
+                        <span>03project</span>
+                        <p>project</p>
+                    </div>
+                    <div class="button">
+                        <span>04clip</span>
+                        <p>clip</p>
+                    </div>
+                    
+                </div>
+                </li>
+                <li id="section02" class="section">
+                    <div class="box">
+                        <h1>01</h1>
+                        <span>art work</span>
+                        <div class="object">
+                            <div id="show">
+                                <img src="../static/image/꿈곰집.png">
+                            </div>
+                            <ul>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+    
+    <script>
+        $(function(){
+            
+            //alert("넌 되니?");
+            //var myPath = document.querySelector("path");
+            //var length = myPath.getTotalLength();
+            //4265.818359375
+            //4726
+            $(".section").mousewheel(function(e,delta){
+                let winhei= $(window).height();
+                let scrpos= $(this).offset().top;//마우스 위치값
+                if( delta > 0 ){
+                    $("html,body").stop().animate({scrollTop:scrpos -winhei});
+                    return false;
+                }else{
+                    $("html,body").stop().animate({scrollTop:scrpos +winhei});
+                    return false;
+                }
+            });
+            });
+        
+    </script>
+</body>
+</html>
